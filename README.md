@@ -25,18 +25,52 @@
               while(num[i] != R[x][0]): #while loop used as it will perform the loop till the condition given becomes false
                   x+=1
 
-              print (num[i],',', R[x][1])
+              print (num[i],':', R[x][1])
 
           else:
-              print (num[i],',', R[x][1])
+              print (num[i],':', R[x][1])
+              
+              
+              
+              
+              
+#### using hashing
+            num=[50,100,1,30,76,89,67]
+
+            r=num.copy() #making a copy of our list of numbers
+            r.sort() #sorting the copy of our list of numbers
+
+            class my_dictionary(dict): #add function for dictionaries
+
+                def __init__(self): 
+                    self = {} 
+
+                def add(self, key, value): 
+                    self[key] = value 
+
+            R= my_dictionary()  #creating an empty dictionary R
+
+
+            i=0
+            for rank in r:
+                rank=i+1
+                Rank=[r[i],rank]
+                R.add(r[i],rank) #adding the rank of aur sorted list to the empty lisr R
+
+                i=i+1
+
+            for i in num:
+                print(i, ':', R.get(i))
+
               
 ### Output       
 
 
-    50 , 3
-    100 , 7
-    1 , 1
-    30 , 2
-    76 , 5
-    89 , 6
-    67 , 4
+
+      50 : 3
+      100 : 7
+      1 : 1
+      30 : 2
+      76 : 5
+      89 : 6
+      67 : 4
