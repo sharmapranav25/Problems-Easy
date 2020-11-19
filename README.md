@@ -55,7 +55,7 @@
             for rank in r:
                 rank=i+1
                 Rank=[r[i],rank]
-                R.add(r[i],rank) #adding the rank of aur sorted list to the empty lisr R
+                R.add(r[i],rank) #adding the rank of dictionary R
 
                 i=i+1
 
